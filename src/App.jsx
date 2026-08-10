@@ -1,16 +1,16 @@
+import UserLogin, {Profile, Setting, UserKey} from "./UserLogin";
 
 function App(){
   return(
     <div>
       <h1>First Component</h1>
-      <Apple/>
-    </div>
-  )
-}
+      <UserLogin/>
+      <Profile/>
+      <Setting/>
 
-function Apple(){
-  return(
-  <h1>Apple</h1>
+      <h5>User Key: {UserKey} </h5>
+
+    </div>
   )
 }
 
