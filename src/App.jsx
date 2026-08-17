@@ -1,33 +1,33 @@
-import { useState } from "react";
-import UserLogin from "./UserLogin";
+
+import User from "./User";
 
 function App(){
-  
-  const [fruit, setFruit] = useState("Apple")
 
-  const change=()=>{
-    setFruit("Banana")
-  }
+    // let name = "Peter"
+    // let age = 29
+    // let email = "peter@test.com"
 
-  const showB=()=>{
-    setShow(!show)
-  }
+    let userObject = {
+      name: "Peter",
+      age: 29,
+      email: "peter@test.com"
+    }
 
-const [show, setShow]=useState(true)
+    let userObject1 = {
+      name: "Sam",
+      age: 20,
+      email: "sam@test.com"
+    }
 
   return(
     <div>
 
-    <h2>{fruit}</h2>
+      <h1>App Component</h1>
 
-    <button onClick={change}>Change Name</button>
-
-    <button onClick={showB}>Show</button>
-
-    {
-        show? <UserLogin/> : null
-     }
-
+      {/* <User name="John doe" /> */}
+      {/* <User name={name} age={age} email={email} /> */}
+      <User user={userObject} />
+      <User user={userObject1} />
     </div>
   )
 }
