@@ -3,6 +3,7 @@ import User from "./User";
 import College from "./College"
 import Wrapper from "./Wrapper";
 import { useState } from "react";
+import Skills from "./Skills";
 
 function App(){
 
@@ -13,10 +14,12 @@ function App(){
 
       <h1>App Component</h1>
 
-      <input type="text" value={val} onChange={(event)=>setVal(event.target.value)} placeholder="Enter User name" />
+        <Skills />
+
+      {/* <input type="text" value={val} onChange={(event)=>setVal(event.target.value)} placeholder="Enter User name" />
       <br />
       <h2>{val}</h2>
-      <button onClick={()=>setVal("")} >Clear</button>
+      <button onClick={()=>setVal("")} >Clear</button> */}
      
     </div>
   )
