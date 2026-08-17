@@ -4,6 +4,7 @@ import College from "./College"
 import Wrapper from "./Wrapper";
 import { useState } from "react";
 import Skills from "./Skills";
+import Gender from "./Gender";
 
 function App(){
 
@@ -14,7 +15,9 @@ function App(){
 
       <h1>App Component</h1>
 
-        <Skills />
+        <Gender />
+
+        {/* <Skills /> */}
 
       {/* <input type="text" value={val} onChange={(event)=>setVal(event.target.value)} placeholder="Enter User name" />
       <br />
