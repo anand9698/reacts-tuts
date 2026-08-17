@@ -1,33 +1,33 @@
-import UserLogin, {Profile, Setting, UserKey} from "./UserLogin";
+import { useState } from "react";
+import UserLogin from "./UserLogin";
 
 function App(){
-  const name = "Anand"
-  let x = 20
-  let y = 30
+  
+  const [fruit, setFruit] = useState("Apple")
 
-  function operation(a,b,op){
-    if(op=="+"){
-      return a+b;
-    }else if(op=="-"){
-      return a-b
-    }else{
-      return a*b
-    }
+  const change=()=>{
+    setFruit("Banana")
   }
+
+  const showB=()=>{
+    setShow(!show)
+  }
+
+const [show, setShow]=useState(true)
+
   return(
     <div>
-      <h1>First Component</h1>
-      <UserLogin/>
-      <Profile/>
-      <Setting/>
 
-      <h5>User Key: {UserKey} </h5>
-      <h6>User Name:{name?name:"User Not Found"}</h6>
-      <h6>Mul: {x*y}</h6>
+    <h2>{fruit}</h2>
 
-      <h3>{operation(2,5,"")}</h3>
+    <button onClick={change}>Change Name</button>
 
-      <button onClick={() => alert("Hello")}>Click</button>
+    <button onClick={showB}>Show</button>
+
+    {
+        show? <UserLogin/> : null
+     }
+
     </div>
   )
 }
