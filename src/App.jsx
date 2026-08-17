@@ -2,23 +2,21 @@
 import User from "./User";
 import College from "./College"
 import Wrapper from "./Wrapper";
+import { useState } from "react";
 
 function App(){
 
-   let collegeName=["IIT", "NIT", "MIT", "AIIMS"]
+   let [val,setVal] = useState()
 
   return(
     <div>
 
       <h1>App Component</h1>
 
-        <Wrapper>
-          <h1>Hello Everyone</h1>
-        </Wrapper>
-
-        <College name={collegeName[0]} /> 
-        <College name={collegeName[1]} /> 
-        <College name={collegeName[2]} /> 
+      <input type="text" value={val} onChange={(event)=>setVal(event.target.value)} placeholder="Enter User name" />
+      <br />
+      <h2>{val}</h2>
+      <button onClick={()=>setVal("")} >Clear</button>
      
     </div>
   )
