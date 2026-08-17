@@ -1,33 +1,25 @@
 
 import User from "./User";
+import College from "./College"
+import Wrapper from "./Wrapper";
 
 function App(){
 
-    // let name = "Peter"
-    // let age = 29
-    // let email = "peter@test.com"
-
-    let userObject = {
-      name: "Peter",
-      age: 29,
-      email: "peter@test.com"
-    }
-
-    let userObject1 = {
-      name: "Sam",
-      age: 20,
-      email: "sam@test.com"
-    }
+   let collegeName=["IIT", "NIT", "MIT", "AIIMS"]
 
   return(
     <div>
 
       <h1>App Component</h1>
 
-      {/* <User name="John doe" /> */}
-      {/* <User name={name} age={age} email={email} /> */}
-      <User user={userObject} />
-      <User user={userObject1} />
+        <Wrapper>
+          <h1>Hello Everyone</h1>
+        </Wrapper>
+
+        <College name={collegeName[0]} /> 
+        <College name={collegeName[1]} /> 
+        <College name={collegeName[2]} /> 
+     
     </div>
   )
 }
